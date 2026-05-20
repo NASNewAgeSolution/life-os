@@ -122,12 +122,6 @@ export default function AuthPage() {
           </p>
         </div>
       </div>
-
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;600;700;800&display=swap');
-        input::placeholder { color: rgba(255,255,255,0.3); }
-        * { box-sizing: border-box; }
-      `}</style>
     </div>
   )
 }

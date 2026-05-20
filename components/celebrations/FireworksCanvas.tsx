@@ -7,7 +7,7 @@ interface FireworksCanvasProps {
 }
 
 function launchFireworks(canvas: HTMLCanvasElement) {
-  const ctx = canvas.getContext('2d')
+  const ctx = canvas.getContext('2d') as CanvasRenderingContext2D
   if (!ctx) return
   canvas.width = window.innerWidth
   canvas.height = window.innerHeight
@@ -66,7 +66,7 @@ function launchFireworks(canvas: HTMLCanvasElement) {
         ctx.fill()
       })
       ctx.beginPath()
-      ctx.arc(p.x, p.y, p.size * p.life, 0, Math.PI * 2)
+      ctx.arc(p.x, p.y, Math.max(0, p.size * p.life), 0, Math.PI * 2)
       ctx.fillStyle = p.color
       ctx.shadowBlur = 8
       ctx.shadowColor = p.color

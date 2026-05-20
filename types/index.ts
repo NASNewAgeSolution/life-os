@@ -26,6 +26,7 @@ export interface Habit {
   created_at: string
   completed_today?: boolean
   current_streak?: number
+  completedDates?: string[]
 }
 
 export interface HabitCompletion {
